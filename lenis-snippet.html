@@ -1,0 +1,22 @@
+<script>/*sykmo-lenis*/
+(function(){
+ if(!document.querySelector('[id$="-lp"]'))return;
+ if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+ var s=document.createElement('script');
+ s.src='https://unpkg.com/lenis@1.1.13/dist/lenis.min.js';
+ s.onload=function(){
+  if(!window.Lenis)return;
+  var lenis=new Lenis({lerp:.085,smoothWheel:true,wheelMultiplier:1});
+  function raf(t){lenis.raf(t);requestAnimationFrame(raf);}
+  requestAnimationFrame(raf);
+  window.__lenis=lenis;
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+   a.addEventListener('click',function(e){
+    var h=a.getAttribute('href');
+    if(h&&h.length>1){var t=document.querySelector(h);if(t){e.preventDefault();lenis.scrollTo(t,{offset:-72});}}
+   });
+  });
+ };
+ document.head.appendChild(s);
+})();
+</script>

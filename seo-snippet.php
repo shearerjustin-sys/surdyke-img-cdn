@@ -19,6 +19,7 @@ function syk_seo_map() {
         'cfmoto'     => ['CFMOTO Side-by-Sides, ATVs & Motorcycles | Surdyke Yamaha', 'CFMOTO side-by-sides, ATVs and motorcycles at Surdyke Yamaha, Lake of the Ozarks. UFORCE, ZFORCE, CFORCE and Ibex — real pricing from $4,599, reserve online.'],
         'ktm'        => ['KTM Motorcycles at Lake of the Ozarks | Surdyke Yamaha', 'KTM motocross and enduro motorcycles at Surdyke Yamaha on Lake of the Ozarks. SX, SX-F, XC-W and EXC-F — real pricing, build and reserve online.'],
         'yamaha'     => ['Yamaha at Lake of the Ozarks — Boats, WaveRunners & Powersports | Surdyke', 'Your full-line Yamaha dealer at Lake of the Ozarks — WaveRunners, jet boats, motorcycles, ATVs and side-by-sides. Build, price and reserve online at Surdyke Yamaha.'],
+        'yamaha-motorcycles' => ['Yamaha Motorcycles & ATVs at Lake of the Ozarks | Surdyke', 'Yamaha dirt bikes, street bikes and ATVs at Surdyke on Lake of the Ozarks — YZ motocross, MT and R-series street, plus Raptor and Grizzly ATVs. Real pricing, reserve online.'],
     ];
 }
 

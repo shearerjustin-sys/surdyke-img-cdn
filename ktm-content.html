@@ -1,0 +1,140 @@
+<!-- wp:html -->
+<style id="ktm-page-css">
+#ktm-lp,#ktm-hd,#ktm-ft{--blue:#1878F8;--blued:#0f63d6;--ink:#0b0c0e;--gray:#5b5f66;--line:#e6e7e9;font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif}
+#ktm-lp *,#ktm-hd *,#ktm-ft *{box-sizing:border-box}
+#ktm-lp img{max-width:100%;display:block}
+#ktm-lp a,#ktm-hd a,#ktm-ft a{text-decoration:none}
+#ktm-hd .syh-top{background:#fafafa;color:#6e6e73;border-bottom:1px solid #ededed;font:500 12.5px/1.2 inherit;padding:9px 0}
+#ktm-hd .syh-top .syh-wrap{display:flex;justify-content:space-between;align-items:center;gap:12px}
+#ktm-hd .syh-top a{color:#6e6e73}#ktm-hd .syh-top a:hover{color:#1d1d1f}
+#ktm-hd .syh-wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+#ktm-hd .syh-bar{border-bottom:1px solid #ededed;box-shadow:0 1px 0 rgba(0,0,0,.03);position:sticky;top:0;background:#fff;z-index:200}
+#ktm-hd .syh-bar .syh-wrap{display:flex;align-items:center;justify-content:space-between;height:66px}
+#ktm-hd .syh-bar img{height:50px;display:block}
+#ktm-hd .syh-nav ul{display:flex;gap:30px;list-style:none;margin:0;padding:0}
+#ktm-hd .syh-nav li{position:relative}
+#ktm-hd .syh-nav a{font-weight:500;font-size:14.5px;color:#1d1d1f;letter-spacing:-.1px}
+#ktm-hd .syh-nav a:hover{color:#1878F8}
+#ktm-hd .syh-nav li.has-sub>a::after{content:"";display:inline-block;width:5px;height:5px;border-right:1.5px solid #9aa0a6;border-bottom:1.5px solid #9aa0a6;transform:rotate(45deg);margin-left:6px;vertical-align:2px}
+#ktm-hd .syh-cta{background:#1878F8;color:#fff;font-weight:600;font-size:13.5px;padding:9px 20px;border-radius:980px;white-space:nowrap}
+#ktm-hd .syh-cta:hover{background:#0f63d6}
+#ktm-hd .syh-sub{position:absolute;top:100%;left:50%;transform:translateX(-50%) translateY(6px);min-width:210px;background:#fff;border:1px solid #e8e8ed;border-radius:14px;box-shadow:0 16px 38px rgba(15,23,42,.14);padding:8px;display:flex;flex-direction:column;gap:1px;opacity:0;visibility:hidden;transition:opacity .18s,transform .18s;z-index:120}
+#ktm-hd .syh-nav li.has-sub:hover .syh-sub{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0)}
+#ktm-hd .syh-sub a{display:block;padding:9px 13px;border-radius:9px;font-size:14px;font-weight:500;color:#1d1d1f;white-space:nowrap}
+#ktm-hd .syh-sub a:hover{background:#f2f5fa;color:#1878F8}
+#ktm-hd .syh-sub a.on{color:#1878F8;font-weight:700}
+#ktm-hd .syh-sub .hd{font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#9aa0a6;padding:10px 13px 5px;margin-top:4px;border-top:1px solid #f0f1f3}
+#ktm-hd .syh-sub .hd:first-child{border-top:0;margin-top:0}
+@media(max-width:900px){#ktm-hd .syh-nav{display:none}}
+#ktm-lp{color:var(--ink);line-height:1.5}
+#ktm-lp .wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+#ktm-lp .eyebrow{font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--blue)}
+#ktm-lp .btn{display:inline-block;font-weight:600;font-size:15px;padding:14px 30px;border-radius:980px;transition:all .2s}
+#ktm-lp .btn.p{background:var(--blue);color:#fff}#ktm-lp .btn.p:hover{background:var(--blued)}
+#ktm-lp .btn.g{background:rgba(255,255,255,.14);color:#fff;border:1.5px solid rgba(255,255,255,.6);backdrop-filter:blur(6px)}#ktm-lp .btn.g:hover{background:rgba(255,255,255,.26)}
+#ktm-lp .hero{position:relative;min-height:84vh;display:flex;align-items:flex-end;overflow:hidden;color:#fff}
+#ktm-lp .hero .bg{position:absolute;inset:0;background-size:cover;background-position:center;transform:scale(1.02)}
+#ktm-lp .hero .ov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,12,14,.45),rgba(11,12,14,.5) 40%,rgba(11,12,14,.9))}
+#ktm-lp .hero .wrap{position:relative;z-index:2;padding-bottom:64px;padding-top:120px}
+#ktm-lp .hero .k{font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#bcd6f6}
+#ktm-lp .hero h1{font-size:clamp(36px,6vw,68px);font-weight:800;letter-spacing:-.02em;line-height:1.03;margin:14px 0 16px;max-width:16ch;text-shadow:0 2px 30px rgba(0,0,0,.4)}
+#ktm-lp .hero p{font-size:clamp(16px,1.9vw,20px);color:#e8eef6;max-width:48ch;margin-bottom:26px}
+#ktm-lp .hero .cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:22px}
+#ktm-lp .hero .pills{display:flex;gap:10px;flex-wrap:wrap}
+#ktm-lp .hero .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:7px 15px;font-size:13px;font-weight:500;backdrop-filter:blur(6px)}
+#ktm-lp .intro{background:#0b0c0e;color:#fff;padding:26px 0}
+#ktm-lp .intro .in{max-width:1180px;margin:0 auto;padding:0 24px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:18px 40px;align-items:center}
+#ktm-lp .intro .lede{font-size:clamp(17px,2vw,22px);font-weight:600;max-width:560px}
+#ktm-lp .intro .stats{display:flex;gap:30px;flex-wrap:wrap}
+#ktm-lp .intro .st b{display:block;font-size:22px;font-weight:800}
+#ktm-lp .intro .st span{font-size:12.5px;color:#9aa0a6}
+#ktm-lp section{padding:0}
+#ktm-lp .pad{padding:74px 0}
+#ktm-lp .head{text-align:center;max-width:680px;margin:0 auto 42px}
+#ktm-lp .head h2{font-size:clamp(28px,3.6vw,42px);font-weight:800;letter-spacing:-.02em;margin:10px 0 10px}
+#ktm-lp .head h2 b{color:var(--blue)}
+#ktm-lp .head p{color:var(--gray);font-size:17px}
+#ktm-lp .band{position:relative;min-height:62vh;display:flex;align-items:center;overflow:hidden;color:#fff}
+#ktm-lp .band .bg{position:absolute;inset:0;background-size:cover;background-position:center}
+#ktm-lp .band .ov{position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.82),rgba(0,0,0,.5) 50%,rgba(0,0,0,.2))}
+#ktm-lp .band .wrap{position:relative;z-index:2}
+#ktm-lp .band .copy{max-width:520px}
+#ktm-lp .band .k{font-size:12.5px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#7fb4ff}
+#ktm-lp .band h2{font-size:clamp(28px,4vw,46px);font-weight:800;letter-spacing:-.02em;line-height:1.06;margin:10px 0 12px}
+#ktm-lp .band p{font-size:17px;line-height:1.55;opacity:.94;margin-bottom:22px}
+#ktm-lp .canvas{display:flex;align-items:center;gap:44px;flex-wrap:wrap;max-width:1180px;margin:0 auto;padding:0 24px}
+#ktm-lp .canvas.light{background:linear-gradient(180deg,#fbfcfd,#eef2f6)}
+#ktm-lp .canvas.dark{background:#0b0c0e;color:#fff}
+#ktm-lp .canvas .copy{flex:1;min-width:280px}
+#ktm-lp .canvas .copy .k{font-size:12.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--blue)}
+#ktm-lp .canvas .copy h2{font-size:clamp(26px,3.4vw,40px);font-weight:800;letter-spacing:-.02em;margin:10px 0 12px}
+#ktm-lp .canvas.light .copy p{color:#414b57;font-size:16.5px;line-height:1.6;margin-bottom:18px}
+#ktm-lp .canvas.dark .copy p{color:#cdd6e0;font-size:16.5px;line-height:1.6;margin-bottom:18px}
+#ktm-lp .canvas .shot{flex:1.2;min-width:300px}
+#ktm-lp .canvas .shot img{width:100%;border-radius:18px;box-shadow:0 30px 60px rgba(0,0,0,.25)}
+#ktm-lp .cwrap{padding:74px 0}
+#ktm-lp .series{margin-bottom:44px}
+#ktm-lp .series-h{display:flex;align-items:baseline;gap:12px;margin:0 0 16px}
+#ktm-lp .series-h h3{font-size:22px;font-weight:800;letter-spacing:-.02em}
+#ktm-lp .series-h span{font-size:13.5px;color:var(--gray);font-weight:500}
+#ktm-lp .mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:18px}
+#ktm-lp .mcard{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;display:flex;flex-direction:column;transition:transform .35s cubic-bezier(.22,1,.36,1),box-shadow .35s}
+#ktm-lp .mcard:hover{transform:translateY(-5px);box-shadow:0 20px 44px rgba(15,23,42,.12)}
+#ktm-lp .mcard .mshot{aspect-ratio:16/10;background:linear-gradient(180deg,#f3f6fa,#e7edf4);display:flex;align-items:center;justify-content:center;padding:14px}
+#ktm-lp .mcard .mshot img{max-width:100%;max-height:100%;object-fit:contain;filter:drop-shadow(0 14px 22px rgba(0,0,0,.18))}
+#ktm-lp .mcard .mbody{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1}
+#ktm-lp .mcard .flag{align-self:flex-start;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--blue);background:#eaf2fe;border-radius:99px;padding:4px 10px;margin-bottom:10px}
+#ktm-lp .mcard .nm{font-size:18px;font-weight:700;letter-spacing:-.02em;margin-bottom:2px}
+#ktm-lp .mcard .pr{font-size:14px;color:var(--gray);margin-bottom:14px}
+#ktm-lp .mcard .pr b{color:var(--ink);font-weight:700}
+#ktm-lp .mcard .acts{margin-top:auto;display:flex;gap:12px;align-items:center}
+#ktm-lp .mcard .bp{background:var(--blue);color:#fff;font-weight:600;font-size:13.5px;padding:9px 18px;border-radius:980px}
+#ktm-lp .mcard .bp:hover{background:var(--blued)}
+#ktm-lp .mcard .lk{font-weight:600;font-size:13.5px;color:var(--blue)}#ktm-lp .mcard .lk:hover{text-decoration:underline}
+#ktm-lp .buildcta{position:relative;min-height:58vh;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;overflow:hidden}
+#ktm-lp .buildcta .bg{position:absolute;inset:0;background-size:cover;background-position:center}
+#ktm-lp .buildcta .ov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.5),rgba(0,0,0,.62))}
+#ktm-lp .buildcta .in{position:relative;z-index:2;max-width:640px;padding:0 24px}
+#ktm-lp .buildcta .k{color:#bcd6f6;font-size:12.5px;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
+#ktm-lp .buildcta h2{font-size:clamp(28px,3.8vw,46px);font-weight:800;letter-spacing:-.02em;margin:12px 0 10px}
+#ktm-lp .buildcta p{font-size:17px;opacity:.94;margin:0 auto 24px}
+#ktm-lp .gallery{background:#0b0c0e;padding:74px 0}
+#ktm-lp .gallery .head h2{color:#fff}
+#ktm-lp .galgrid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:12px;max-width:1180px;margin:0 auto;padding:0 24px}
+#ktm-lp .galgrid .g{background-size:cover;background-position:center;border-radius:12px}
+#ktm-lp .galgrid .wide{grid-column:span 2}#ktm-lp .galgrid .tall{grid-row:span 2}
+@media(max-width:760px){#ktm-lp .galgrid{grid-template-columns:1fr 1fr}#ktm-lp .galgrid .wide{grid-column:span 2}#ktm-lp .galgrid .tall{grid-row:span 1}}
+#ktm-lp .syw{background:#f6f7f9;padding:74px 0}
+#ktm-lp .syw .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;max-width:1180px;margin:0 auto;padding:0 24px}
+#ktm-lp .syw .card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:24px 22px}
+#ktm-lp .syw .card .ic{font-size:24px;margin-bottom:12px}
+#ktm-lp .syw .card h3{font-size:16px;font-weight:700;margin-bottom:6px}
+#ktm-lp .syw .card p{color:var(--gray);font-size:13.5px;line-height:1.55}
+@media(max-width:860px){#ktm-lp .syw .grid{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){#ktm-lp .syw .grid{grid-template-columns:1fr}}
+#ktm-lp .lead{background:#fff;border-top:1px solid var(--line);padding:74px 0}
+#ktm-lp .lead .grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;max-width:1180px;margin:0 auto;padding:0 24px}
+#ktm-lp .lead h2{font-size:clamp(28px,3.6vw,42px);font-weight:800;letter-spacing:-.02em;margin:10px 0 12px}
+#ktm-lp .lead .sub{color:var(--gray);font-size:17px;max-width:42ch}
+#ktm-lp .lead .lcard{background:#f6f7f9;border:1px solid var(--line);border-radius:18px;padding:28px}
+#ktm-lp .lead form{display:grid;gap:14px}
+#ktm-lp .lead .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+#ktm-lp .lead label{display:block;font-size:12px;font-weight:600;color:#6e6e73;margin-bottom:6px}
+#ktm-lp .lead input,#ktm-lp .lead select{width:100%;padding:12px 14px;border-radius:10px;border:1px solid #d3d6da;background:#fff;font-family:inherit;font-size:15px}
+#ktm-lp .lead input:focus,#ktm-lp .lead select:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 3px rgba(24,120,248,.15)}
+#ktm-lp .lead .note{font-size:12.5px;color:var(--gray)}
+@media(max-width:820px){#ktm-lp .lead .grid{grid-template-columns:1fr;gap:30px}#ktm-lp .lead .row{grid-template-columns:1fr}}
+#ktm-ft.syf{background:#0b0c0e;color:#9aa0a6;font-size:14px;line-height:1.55}
+#ktm-ft .syf-wrap{max-width:1200px;margin:0 auto;padding:48px 24px 26px}
+#ktm-ft a{color:#cfd1d4}#ktm-ft a:hover{color:#fff}
+#ktm-ft .syf-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:28px}
+#ktm-ft .syf-loc h4{color:#fff;font-size:14px;font-weight:700;margin:0 0 6px}
+#ktm-ft .syf-loc .ph{color:#3a93ff;font-weight:600}
+#ktm-ft .syf-links{margin-top:34px;display:flex;flex-wrap:wrap;gap:22px;align-items:center;border-top:1px solid #23262b;padding-top:22px}
+#ktm-ft .syf-ql{display:flex;gap:22px;flex-wrap:wrap;font-weight:600}
+#ktm-ft .syf-bot{border-top:1px solid #23262b;margin-top:20px;padding-top:18px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:12.5px;color:#73767c}
+#ktm-ft .syf-brand{color:#fff;font-weight:800}
+@media(max-width:820px){#ktm-ft .syf-cols{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){#ktm-ft .syf-cols{grid-template-columns:1fr}}
+#ktm-lp .mcard.txt .mbody{padding:22px 20px 20px}#ktm-lp .mcard.txt .flag{margin-bottom:12px}#ktm-lp .hero h1,#ktm-lp .band h2,#ktm-lp .buildcta h2,#ktm-lp .canvas.dark h2,#ktm-lp .canvas.dark .copy h2,#ktm-lp .gallery .head h2{color:#fff!important}</style><div id="ktm-hd"><div class="syh-top"><div class="syh-wrap"><div>Osage Beach, MO &#183; (573) 348-6575</div><div><a href="https://surdyke.permanentbuild.com/service/">Service</a> &nbsp; <a href="https://surdykeyamahaparts.com/">Parts Store</a> &nbsp; <a href="https://surdyke.permanentbuild.com/storage/">Marina &amp; Storage</a> &nbsp; <a href="https://surdyke.permanentbuild.com/rentals/">Rentals</a></div></div></div><header class="syh-bar"><div class="syh-wrap"><a href="https://surdyke.permanentbuild.com/" aria-label="Surdyke Yamaha home"><img src="https://permanentbuild.com/surdyke2/surdyke2-mockup/img/logo.png" alt="Surdyke Yamaha"></a><nav class="syh-nav"><ul><li class="has-sub"><a href="https://surdyke.permanentbuild.com/lineup/">Boats &amp; Marine</a><div class="syh-sub"><a href="https://surdyke.permanentbuild.com/build/?cat=boat">Build &amp; Price</a><a href="https://surdyke.permanentbuild.com/inventory/?cat=boat">Shop In-Stock</a><div class="hd">Shop by Brand</div><a href="https://surdyke.permanentbuild.com/axopar/">Axopar</a><a href="https://surdyke.permanentbuild.com/beneteau/">Beneteau</a><a href="https://surdyke.permanentbuild.com/scarab/">Scarab</a><a href="https://surdyke.permanentbuild.com/suncatcher/">SunCatcher</a><a href="https://surdyke.permanentbuild.com/g3/">G3</a></div></li><li><a href="https://surdyke.permanentbuild.com/build/?cat=pwc">WaveRunners</a></li><li class="has-sub"><a href="https://surdyke.permanentbuild.com/build/?cat=moto,atv,ktm">Motorcycles &amp; ATVs</a><div class="syh-sub"><a href="https://surdyke.permanentbuild.com/build/?cat=moto,atv,ktm">Build &amp; Price</a><a href="https://surdyke.permanentbuild.com/inventory/?cat=moto">Shop In-Stock</a><div class="hd">Shop by Brand</div><a href="https://surdyke.permanentbuild.com/cfmoto/">CFMOTO</a><a href="https://surdyke.permanentbuild.com/build/?cat=moto,atv">Yamaha</a><a class="on" href="https://surdyke.permanentbuild.com/ktm/">KTM</a></div></li><li class="has-sub"><a href="https://surdyke.permanentbuild.com/build/?cat=sxs">Side-by-Side</a><div class="syh-sub"><a href="https://surdyke.permanentbuild.com/build/?cat=sxs">Build &amp; Price</a><a href="https://surdyke.permanentbuild.com/cfmoto/">CFMOTO UFORCE &amp; ZFORCE</a></div></li><li><a href="https://surdyke.permanentbuild.com/inventory/?cond=Used">Pre-Owned</a></li></ul></nav><a class="syh-cta" href="#quote">Request a Quote</a></div></header></div><div id="ktm-lp"><section class="hero"><div class="bg" style="background-image:url(https://surdyke.permanentbuild.com/wp-content/uploads/2026/06/ktm-hero.jpg)"></div><div class="ov"></div><div class="wrap"><div class="k">Now a KTM Dealer &#183; Lake of the Ozarks</div><h1>Ready to Race.</h1><p>The most decorated off-road racing marque on earth &#8212; lighter, sharper, WP-suspended machines bred to win. KTM motocross and enduro, now at Surdyke.</p><div class="cta"><a class="btn p" href="#lineup">Explore the Lineup</a><a class="btn g" href="https://surdyke.permanentbuild.com/build/?cat=ktm">Build &amp; Price</a></div><div class="pills"><span class="pill">Motocross &#183; Enduro</span><span class="pill">From $8,499</span><span class="pill">Reserve online &#183; $500 refundable</span></div></div></section><div class="intro"><div class="in"><div class="lede">Austria&#8217;s &#8220;Ready to Race&#8221; brand &#8212; Europe&#8217;s largest motorcycle maker and the winningest name in off-road.</div><div class="stats"><div class="st"><b>18</b><span>Straight Dakar wins</span></div><div class="st"><b>500+</b><span>World titles</span></div><div class="st"><b>WP</b><span>Suspension, factory-dialed</span></div></div></div></div><section class="band"><div class="bg" style="background-image:url(https://surdyke.permanentbuild.com/wp-content/uploads/2026/06/ktm-band.jpg)"></div><div class="ov"></div><div class="wrap"><div class="copy"><div class="k">Born From Racing</div><h2>Race DNA you can buy off the floor.</h2><p>The same engineering that wins AMA Supercross, MXGP and the Dakar trickles straight into the bike in your garage. KTM doesn&#8217;t build replicas of race bikes &#8212; it builds the race bikes.</p><a class="btn p" href="#lineup">See the lineup</a></div></div></section><section id="lineup" class="pad"><div class="wrap"><div class="head"><div class="eyebrow">The Lineup</div><h2>KTM at <b>Surdyke.</b></h2><p>Real pricing across motocross and enduro &#8212; build yours online and reserve with a refundable $500 deposit.</p></div><div class="series"><div class="series-h"><h3>Motocross</h3><span>SX &amp; SX-F &#183; gate-drop weapons</span></div><div class="mgrid"><div class="mcard txt"><div class="mbody"><div class="flag">Motocross</div><div class="nm">KTM 300 SX</div><div class="pr">from <b>$8,499</b></div><div class="acts"><a class="bp" href="https://surdyke.permanentbuild.com/build/?cat=ktm">Build yours &#8594;</a><a class="lk" href="https://surdyke.permanentbuild.com/inventory/?q=KTM%20300%20SX">In stock</a></div></div></div><div class="mcard txt"><div class="mbody"><div class="flag">Motocross</div><div class="nm">KTM 350 SX-F</div><div class="pr">from <b>$9,299</b></div><div class="acts"><a class="bp" href="https://surdyke.permanentbuild.com/build/?cat=ktm">Build yours &#8594;</a><a class="lk" href="https://surdyke.permanentbuild.com/inventory/?q=KTM%20350%20SX-F">In stock</a></div></div></div><div class="mcard txt"><div class="mbody"><div class="flag">Motocross</div><div class="nm">KTM 450 SX-F</div><div class="pr">from <b>$9,799</b></div><div class="acts"><a class="bp" href="https://surdyke.permanentbuild.com/build/?cat=ktm">Build yours &#8594;</a><a class="lk" href="https://surdyke.permanentbuild.com/inventory/?q=KTM%20450%20SX-F">In stock</a></div></div></div></div></div><div class="series"><div class="series-h"><h3>Enduro</h3><span>XC-W &amp; EXC-F &#183; master any terrain</span></div><div class="mgrid"><div class="mcard txt"><div class="mbody"><div class="flag">Enduro</div><div class="nm">KTM 250 XC-W</div><div class="pr">from <b>$11,549</b></div><div class="acts"><a class="bp" href="https://surdyke.permanentbuild.com/build/?cat=ktm">Build yours &#8594;</a><a class="lk" href="https://surdyke.permanentbuild.com/inventory/?q=KTM%20250%20XC-W">In stock</a></div></div></div><div class="mcard txt"><div class="mbody"><div class="flag">Enduro</div><div class="nm">KTM 300 XC-W</div><div class="pr">from <b>$11,949</b></div><div class="acts"><a class="bp" href="https://surdyke.permanentbuild.com/build/?cat=ktm">Build yours &#8594;</a><a class="lk" href="https://surdyke.permanentbuild.com/inventory/?q=KTM%20300%20XC-W">In stock</a></div></div></div><div class="mcard txt"><div class="mbody"><div class="flag">Enduro</div><div class="nm">KTM 500 EXC-F</div><div class="pr">from <b>$13,499</b></div><div class="acts"><a class="bp" href="https://surdyke.permanentbuild.com/build/?cat=ktm">Build yours &#8594;</a><a class="lk" href="https://surdyke.permanentbuild.com/inventory/?q=KTM%20500%20EXC-F">In stock</a></div></div></div></div></div></div></section><section class="pad" style="background:#f6f7f9"><div class="wrap"><div class="head"><div class="eyebrow">Why KTM</div><h2>What sets <b>KTM</b> apart.</h2><p>Seventy years of racing, distilled into every bike on the floor.</p></div><div class="mgrid"><div class="mcard txt"><div class="mbody"><div class="flag">01</div><div class="nm">18 Straight Dakars</div><div class="pr" style="color:#5b5f66;font-size:14px;line-height:1.55">KTM won the Dakar Rally bike class 18 years running (2001&#8211;2019) &#8212; a Guinness World Record, and the most dominant streak in rally.</div></div></div><div class="mcard txt"><div class="mbody"><div class="flag">02</div><div class="nm">500+ World Titles</div><div class="pr" style="color:#5b5f66;font-size:14px;line-height:1.55">Seventy years, 500-plus world titles across motocross, supercross, enduro, rally and MotoGP. Racing isn&#8217;t marketing here &#8212; it&#8217;s the business.</div></div></div><div class="mcard txt"><div class="mbody"><div class="flag">03</div><div class="nm">Fuel-Injected 2-Strokes</div><div class="pr" style="color:#5b5f66;font-size:14px;line-height:1.55">KTM built the world&#8217;s first mass-production fuel-injected two-stroke off-road bikes &#8212; no more pre-mix or jetting, just twist and go.</div></div></div><div class="mcard txt"><div class="mbody"><div class="flag">04</div><div class="nm">Lighter, Sharper, Faster</div><div class="pr" style="color:#5b5f66;font-size:14px;line-height:1.55">A power-to-weight obsession with Brembo brakes and hydraulic clutch standard &#8212; the bikes feel as fast as they are.</div></div></div><div class="mcard txt"><div class="mbody"><div class="flag">05</div><div class="nm">WP Suspension Built In</div><div class="pr" style="color:#5b5f66;font-size:14px;line-height:1.55">Every serious KTM rides on WP, the Austrian suspension house inside the KTM group &#8212; race-bred damping, dialed from the factory.</div></div></div><div class="mcard txt"><div class="mbody"><div class="flag">06</div><div class="nm">A Bike for Every Trail</div><div class="pr" style="color:#5b5f66;font-size:14px;line-height:1.55">Motocross (SX), cross-country (XC), enduro (EXC), adventure &#8212; two- and four-stroke, there&#8217;s a Ready to Race machine for your terrain.</div></div></div></div></div></section><section class="buildcta"><div class="bg" style="background-image:url(https://surdyke.permanentbuild.com/wp-content/uploads/2026/06/ktm-g2.jpg)"></div><div class="ov"></div><div class="in"><div class="k">Build &amp; Price</div><h2>Configure your KTM.</h2><p>Spec your SX, SX-F, XC-W or EXC-F with real pricing &#8212; then reserve online with a fully refundable $500 deposit.</p><a class="btn p" href="https://surdyke.permanentbuild.com/build/?cat=ktm">Start your build &#8594;</a></div></section><section class="gallery"><div class="head"><div class="eyebrow">Gallery</div><h2>Ready to Race.</h2></div><div class="galgrid"><div class="g wide tall" style="background-image:url(https://surdyke.permanentbuild.com/wp-content/uploads/2026/06/ktm-hero.jpg)"></div><div class="g" style="background-image:url(https://surdyke.permanentbuild.com/wp-content/uploads/2026/06/ktm-band.jpg)"></div><div class="g" style="background-image:url(https://surdyke.permanentbuild.com/wp-content/uploads/2026/06/ktm-g1.jpg)"></div><div class="g wide" style="background-image:url(https://surdyke.permanentbuild.com/wp-content/uploads/2026/06/ktm-g2.jpg)"></div></div></section><section class="syw"><div class="head"><div class="eyebrow">Why buy from Surdyke</div><h2>Anyone can sell you a bike. <b>We keep you riding.</b></h2></div><div class="grid"><div class="card"><div class="ic">&#128737;&#65039;</div><h3>Authorized KTM dealer</h3><p>Factory-backed sales, warranty and PowerParts &#8212; direct from KTM.</p></div><div class="card"><div class="ic">&#128295;</div><h3>Full-service shop</h3><p>Setup, suspension and service handled in-house at the lake.</p></div><div class="card"><div class="ic">&#128736;&#65039;</div><h3>Factory-trained techs</h3><p>The people who service your bike know it inside out.</p></div><div class="card"><div class="ic">&#128203;</div><h3>Tailored financing</h3><p>Financing structured around your build and your timeline.</p></div></div></section><section class="lead" id="quote"><div class="grid"><div><div class="eyebrow">Get started</div><h2>Request pricing &amp; availability.</h2><p class="sub">Tell us what you&#8217;re after &#8212; we&#8217;ll get you real numbers, not a runaround.</p></div><div class="lcard"><form method="post" action="/leads"><input type="hidden" name="source" value="ktm"><div class="row"><div><label>Name</label><input name="name" placeholder="Your name" required></div><div><label>Phone</label><input name="phone" type="tel" placeholder="(573) 000-0000" required></div></div><div><label>Email</label><input name="email" type="email" placeholder="you@email.com" required></div><div class="row"><div><label>Interest</label><select name="model"><option>Not sure yet</option><option>Motocross (SX / SX-F)</option><option>Enduro (XC-W / EXC-F)</option></select></div><div><label>Timeframe</label><select name="timeframe"><option>This season</option><option>Next 6 months</option><option>Just exploring</option></select></div></div><button class="btn p" type="submit" style="justify-self:start;background:#1878F8">Get My Quote</button><div class="note">A Surdyke specialist will reach out &#8212; no spam, no pressure.</div></form></div></div></section></div><footer id="ktm-ft" class="syf"><div class="syf-wrap"><div class="syf-cols"><div class="syf-loc"><h4>Surdyke Yamaha</h4><div class="ph"><a href="tel:+15733486575">(573) 348-6575</a></div>5863 Osage Beach Pkwy<br>Osage Beach, MO 65065</div><div class="syf-loc"><h4>Surdyke Yamaha Marina</h4><div class="ph"><a href="tel:+15733489283">(573) 348-9283</a></div>1660 Yamaha Drive<br>Osage Beach, MO 65065</div><div class="syf-loc"><h4>Surdyke Yamaha Port 20</h4><div class="ph"><a href="tel:+15733483178">(573) 348-3178</a></div>5395 Spruce Lane<br>Osage Beach, MO 65065</div><div class="syf-loc"><h4>Surdyke&#8217;s Boat Depot</h4><div class="ph"><a href="tel:+15733486575">(573) 348-6575</a></div>5874 Osage Beach Pkwy<br>Osage Beach, MO 65065</div></div><div class="syf-links"><div class="syf-ql"><a href="https://surdyke.permanentbuild.com/build/">Build &amp; Price</a><a href="https://surdyke.permanentbuild.com/inventory/">Inventory</a><a href="https://surdykeyamahaparts.com/">Parts</a><a href="https://surdyke.permanentbuild.com/service/">Service &amp; Repair</a><a href="https://surdyke.permanentbuild.com/financing/">Financing</a><a href="https://surdyke.permanentbuild.com/locations/">Locations</a></div></div><div class="syf-bot"><div>&#169; 2026 <span class="syf-brand">Surdyke Yamaha</span> &#183; Lake of the Ozarks, Missouri</div></div></div></footer>
+<!-- /wp:html -->

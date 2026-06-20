@@ -1,0 +1,62 @@
+<!--cfx-motion--><style id="cfx-motion">
+#cf-hd .syh-bar{transition:box-shadow .35s ease,background .35s ease,backdrop-filter .35s ease}
+#cf-hd .syh-bar.cfx-scrolled{box-shadow:0 8px 34px rgba(8,10,14,.10);background:rgba(255,255,255,.82);backdrop-filter:saturate(170%) blur(16px);-webkit-backdrop-filter:saturate(170%) blur(16px)}
+#cf-lp .mcard{transition:transform .5s cubic-bezier(.22,1,.36,1),box-shadow .5s ease,border-color .5s ease}
+#cf-lp .mcard:hover{transform:translateY(-8px);box-shadow:0 26px 54px rgba(8,10,14,.16);border-color:#1878F8}
+#cf-lp .galgrid .g{transition:transform .9s cubic-bezier(.16,1,.3,1),filter .6s ease;will-change:transform}
+#cf-lp .galgrid .g:hover{transform:scale(1.045)}
+#cf-lp .hero .btn{transition:transform .3s cubic-bezier(.22,1,.36,1),background .2s ease,box-shadow .3s ease}
+#cf-lp .hero .btn.p:hover{box-shadow:0 14px 34px rgba(24,120,248,.4)}
+@media (prefers-reduced-motion:no-preference){
+ #cf-lp .hero .bg{animation:cfxKB 24s ease-in-out infinite alternate}
+ @keyframes cfxKB{from{transform:scale(1.06)}to{transform:scale(1.17) translateY(-2%)}}
+ #cf-lp .cfx-rv{opacity:0;transform:translateY(38px);transition:opacity 1s cubic-bezier(.16,1,.3,1),transform 1s cubic-bezier(.16,1,.3,1)}
+ #cf-lp .cfx-rv.cfx-in{opacity:1;transform:none}
+ #cf-lp .hero h1 .cfx-w{display:inline-block;overflow:hidden;vertical-align:top;line-height:inherit}
+ #cf-lp .hero h1 .cfx-w i{display:inline-block;font-style:normal;transform:translateY(118%);transition:transform 1.05s cubic-bezier(.16,1,.3,1)}
+ #cf-lp .hero h1.cfx-in .cfx-w i{transform:none}
+ #cf-lp .hero .k,#cf-lp .hero p,#cf-lp .hero .cta,#cf-lp .hero .pills{opacity:0;transform:translateY(22px);animation:cfxUp 1s cubic-bezier(.16,1,.3,1) forwards}
+ #cf-lp .hero .k{animation-delay:.15s}#cf-lp .hero p{animation-delay:.5s}#cf-lp .hero .cta{animation-delay:.66s}#cf-lp .hero .pills{animation-delay:.8s}
+ @keyframes cfxUp{to{opacity:1;transform:none}}
+}
+</style>
+<script>/*cfx-motion*/
+(function(){
+ var lp=document.getElementById('cf-lp');if(!lp)return;
+ var RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+ var bar=document.querySelector('#cf-hd .syh-bar');
+ if(bar){var onsc=function(){bar.classList.toggle('cfx-scrolled',(window.scrollY||0)>40);};addEventListener('scroll',onsc,{passive:true});onsc();}
+ if(RM)return;
+ // hero headline word-by-word
+ var h1=lp.querySelector('.hero h1');
+ if(h1&&h1.children.length===0){
+   var words=h1.textContent.trim().split(/\s+/);
+   h1.innerHTML=words.map(function(w,i){return '<span class="cfx-w"><i style="transition-delay:'+(120+i*85)+'ms">'+w+'</i></span>';}).join(' ');
+   requestAnimationFrame(function(){requestAnimationFrame(function(){h1.classList.add('cfx-in');});});
+ }
+ // scroll-reveal (skip the hero — it has its own intro)
+ var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('cfx-in');io.unobserve(e.target);}});},{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+ function rv(sel,stag){var els=[].slice.call(lp.querySelectorAll(sel));els.forEach(function(el,i){if(el.closest('.hero'))return;el.classList.add('cfx-rv');if(stag)el.style.transitionDelay=((i%6)*75)+'ms';io.observe(el);});}
+ rv('.intro .in',0);
+ rv('.band .copy',0);
+ rv('.canvas .copy, .canvas .shot',0);
+ rv('.pad .head, .gallery .head',0);
+ rv('.series',0);
+ rv('.mcard',1);
+ rv('.buildcta .in',0);
+ rv('.galgrid .g',1);
+ rv('.syw .card',1);
+ rv('.lead > .grid > div',0);
+ // stat count-up
+ function countUp(b){var txt=b.textContent;var m=txt.match(/([\d,]+)/);if(!m)return;var target=parseInt(m[1].replace(/,/g,''),10);if(!target)return;var pre=txt.slice(0,m.index),suf=txt.slice(m.index+m[1].length);var dur=1100,t0=null;function step(ts){if(!t0)t0=ts;var p=Math.min((ts-t0)/dur,1);var e=1-Math.pow(1-p,3);var v=Math.round(target*e);b.textContent=pre+v.toLocaleString()+suf;if(p<1)requestAnimationFrame(step);}requestAnimationFrame(step);}
+ var sio=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){countUp(e.target);sio.unobserve(e.target);}});},{threshold:.6});
+ [].slice.call(lp.querySelectorAll('.intro .st b')).forEach(function(b){if(/\d/.test(b.textContent))sio.observe(b);});
+ // magnetic hero CTAs (desktop)
+ if(matchMedia('(pointer:fine)').matches){
+   [].slice.call(lp.querySelectorAll('.hero .btn')).forEach(function(el){
+     el.addEventListener('mousemove',function(e){var r=el.getBoundingClientRect();el.style.transform='translate('+((e.clientX-r.left-r.width/2)*.25)+'px,'+((e.clientY-r.top-r.height/2)*.35)+'px)';});
+     el.addEventListener('mouseleave',function(){el.style.transform='';});
+   });
+ }
+})();
+</script>
